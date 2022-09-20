@@ -1,0 +1,36 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+header{
+    position: absolute;
+    width: 360px;
+    height: 380px;
+    left: 88px;
+    top: 238px;
+    background: url(./assets/111752481.png);
+    border: 1px solid #000000;
+    border-radius: 200px;
+    background-size:cover;
+}
+
+
+body{
+    background-color:rgba(2, 51, 66, 1);
+}
+
+.container{
+    position: absolute;
+    width: 872px;
+    height: 349px;
+    left: 30vw;
+    top: 1vh;
+    background: rgba(17, 86, 107, 0.54);
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    padding: ;
+}
