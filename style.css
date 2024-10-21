@@ -6,31 +6,63 @@
 }
 
 header{
-    position: absolute;
-    width: 360px;
-    height: 380px;
-    left: 88px;
-    top: 238px;
-    background: url(./assets/111752481.png);
-    border: 1px solid #000000;
-    border-radius: 200px;
-    background-size:cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
 }
 
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: salmon;
+    width: 100vw;
+    height: 8vh;
+}
+
+.nav p{
+    margin: 15vw;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 8vh); /* Assuming the navbar height is 8vh, adjust as needed */
+    width: 100%;
+}
 
 body{
-    background-color:rgba(2, 51, 66, 1);
+    background-color: bisque;
+}  
+
+.containergeral{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 40vh;
+    width: 45vw;
+    background-color: rgb(0, 17, 255);
 }
 
-.container{
-    position: absolute;
-    width: 872px;
-    height: 349px;
-    left: 30vw;
-    top: 1vh;
-    background: rgba(17, 86, 107, 0.54);
+.container {
     text-align: center;
-    color: white;
-    font-size: 32px;
-    padding: ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    align-items: center;
+}
+
+.vimage {
+    grid-row: span 2;
+    background-color: aqua;
+    height: auto;
+    width: auto;
+}
+
+.himage{
+    width: 100%; /* Make the small images fill their grid cells */
+    height: auto;
 }
