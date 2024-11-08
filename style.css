@@ -1,68 +1,90 @@
-*{
-    border: 0;
+
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
 
-header{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
 }
 
-.nav{
+.nav {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    background-color: salmon;
-    width: 100vw;
-    height: 8vh;
+    background-color: rgb(189, 189, 189);
+    padding: 1em;
+    
 }
 
-.nav p{
-    margin: 15vw;
+.nav a {
+    text-decoration: none;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    margin: 0 1em;
+    padding: 30px;
+}
+
+.nav :hover {
+    background-color: rgba(255, 0, 0, 0.63);
+    transition: 1s;
 }
 
 .main-content {
     display: flex;
-    align-items: center;
+    padding: 2em;
     justify-content: center;
-    height: calc(100vh - 8vh); /* Assuming the navbar height is 8vh, adjust as needed */
-    width: 100%;
+    text-align: center;
+    flex-direction: column;
 }
 
-body{
-    background-color: bisque;
-}  
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-template-rows: auto auto; /* Adjust rows as needed */
+    gap: 2em; /* Spacing between elements */
+    max-width: 1200px; /* Adjust to your preference */
+    margin: 30px auto; /* Center the container */
+}
 
-.containergeral{
+.vimage, .himage1, .himage2 {
+    background-color: lightgray;
+    border: black 4px solid;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    height: 40vh;
-    width: 45vw;
-    background-color: rgb(0, 17, 255);
+    text-align: center;
 }
 
-.container {
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    align-items: center;
+.vimage img, .himage1 img, .himage2 img {
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    width: 100%; /* Makes the image stretch to the width of its container */
+    height: 100%; /* Makes the image stretch to the height of its container */
 }
+
 
 .vimage {
-    grid-row: span 2;
-    background-color: aqua;
-    height: auto;
-    width: auto;
+    grid-column: span 1; /* Takes one column */
+    grid-row: span 2; /* Takes two rows if needed */
+    height: 400px; /* Adjust to your Figma dimensions */
+    width: 300px; /* Adjust to your Figma dimensions */
+    background-color: rgb(185, 185, 185);
 }
 
-.himage{
-    width: 100%; /* Make the small images fill their grid cells */
-    height: auto;
+.himage1 {
+    grid-column: span 1; /* Takes one column */
+    height: 200px; /* Adjust to your Figma dimensions */
+    width: 300px; /* Adjust to your Figma dimensions */
+    background-color: lightcoral;
+}
+
+.himage2 {
+    grid-column: span 1; /* Spans across two columns */
+    height: 150px; /* Adjust to your Figma dimensions */
+    width: 100%; /* Stretches to fit container width */
+    background-color: lightgray;
 }
