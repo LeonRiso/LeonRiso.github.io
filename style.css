@@ -1,4 +1,3 @@
-/* Reset all margins and paddings */
 * {
     margin: 0;
     padding: 0;
@@ -45,14 +44,11 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two equal columns */
     grid-template-rows: auto auto; /* Adjust rows as needed */
-    gap: 1px; /* Spacing between elements */
-    max-width: 1200px; /* Adjust to your preference */
-    margin: 30px auto; /* Center the container */
+    gap: 1px; 
+    max-width: 1200px; 
+    margin: 30px auto; 
 }
 
-
-
-/* Apply general styling to the image containers */
 .vimage, .himage1, .himage2 {
     background-color: lightgray;
     border: black 4px solid;
@@ -72,33 +68,33 @@ body {
 }
 
 .vimage img, .himage1 img, .himage2 img {
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    width: 100%; /* Makes the image stretch to the width of its container */
-    height: 100%; /* Makes the image stretch to the height of its container */
+    object-fit: cover; 
+    width: 100%; 
+    height: 100%;
 }
 
 /* Specific styling for vimage */
 .vimage {
     grid-column: span 1; /* Takes one column */
     grid-row: span 2; /* Takes two rows if needed */
-    height: 400px; /* Adjust to your Figma dimensions */
-    width: 300px; /* Adjust to your Figma dimensions */
+    height: 400px; 
+    width: 300px; 
     background-color: rgb(185, 185, 185);
 }
 
 /* Specific styling for himage1 */
 .himage1 {
     grid-column: span 1; /* Takes one column */
-    height: 200px; /* Adjust to your Figma dimensions */
-    width: 300px; /* Adjust to your Figma dimensions */
+    height: 200px; 
+    width: 300px; 
     background-color: lightcoral;
 }
 
 /* Specific styling for himage2 */
 .himage2 {
     grid-column: span 1; /* Spans across two columns */
-    height: 150px; /* Adjust to your Figma dimensions */
-    width: 100%; /* Stretches to fit container width */
+    height: 150px; 
+    width: 100%; 
     background-color: lightgray;
 }
 
@@ -113,13 +109,58 @@ body {
 
 /* Styling for the gallery images */
 .gallery-image {
-    width: 100%; /* Make images fill the grid cell */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: Rounded corners */
-    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease-in-out; 
 }
 
 /* Hover effect for images */
 .gallery-image:hover {
     transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Styling for gallery thumbnails */
+.gallery-thumbnail {
+    width: 65%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.gallery-title {
+    text-align: center;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+#kofi{
+    align-self: center;
+    height: 45vh;
+    width: 45vw;
+    margin: 50px;
+}
+
+.aboutcont{
+    border: #333 2px solid;
+    gap: 20px;
+    justify-content: space-between;
 }
