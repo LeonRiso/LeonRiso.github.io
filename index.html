@@ -10,14 +10,16 @@
 
     <body>
         <header class="nav">
-            <a href="#">Home</a>
-            <a href="aboutme.html">About Me</a>
-            <a href="https://ko-fi.com/baslerjones">Commissions</a>
-            <a href="https://x.com/BaslerJones">Twitter</a>
-            <a href="gallery.html">All Galleries</a>
-
+            <div class="burger" id="burger">&#9776;</div> <!-- Burger icon -->
+        
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="aboutme.html">About Me</a>
+                <a href="https://ko-fi.com/baslerjones">Commissions</a>
+                <a href="https://x.com/BaslerJones">Twitter</a>
+                <a href="gallery.html">All Galleries</a>
+            </nav>
         </header>
-    
         <div class="main-content">
             <h2 id="digitalPaintings">Digital Painting</h2>
             <div class="grid-container" id="digitalPaintings" >
@@ -42,7 +44,6 @@
         </div>
 
     </body>
-    </html>
 
     <script>
 function navigateToGallery(collectionName) {
@@ -58,6 +59,13 @@ document.querySelectorAll('.grid-container').forEach(container => {
         }
     });
 });
+
+const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
     </script>
 
 </html>
